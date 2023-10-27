@@ -136,7 +136,15 @@ public class fieldgame {
             System.out.println("Player 1 score: " + player1Score);
             System.out.println("Player 2 score: " + player2Score);
             System.out.println("---------------------"); //print out the overall score and a bracket 
+            
+            if (player1Score < 1) {
+                player1Score = 0;
+            }
 
+            if (player2Score < 1) {
+                player2Score = 0;
+            }
+            //Makes sure that the players balance cannot go below 0 points
         }
  
         if (player1Score >= 3000) {
