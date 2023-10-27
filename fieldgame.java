@@ -6,15 +6,20 @@ public class fieldgame {
  
 
     public fieldgame() { //initiating the game with 1000 points for both players
-        player1Score = 1000;
-        player2Score = 1000;
+        player1Score = Konto.gameReset();
+        player2Score = Konto.gameReset();
     }
  
    
     //code for when the game starts 
     public void playRound() {
         while (player1Score < 3000 && player2Score < 3000) {
+            System.out.println("Play game? y/n");
+
+            Playerresponse.PlayerResponse();
             double player1Roll = Dice.rollDice();
+
+            
             double player2Roll = Dice.rollDice();
  
 
@@ -136,7 +141,15 @@ public class fieldgame {
             System.out.println("Player 1 score: " + player1Score);
             System.out.println("Player 2 score: " + player2Score);
             System.out.println("---------------------"); //print out the overall score and a bracket 
+            
+            if (player1Score < 1) {
+                player1Score = 0;
+            }
 
+            if (player2Score < 1) {
+                player2Score = 0;
+            }
+            //Makes sure that the players balance cannot go below 0 points
         }
  
         if (player1Score >= 3000) {
