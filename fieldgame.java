@@ -9,9 +9,7 @@ public class fieldgame {
         player2Score = 1000;
     }
  
-   //prints out the dicecurrent that is two dices together
-    
- 
+   
     //code for when the game starts 
     public void playRound() {
         while (player1Score < 3000 && player2Score < 3000) {
