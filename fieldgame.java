@@ -6,8 +6,8 @@ public class fieldgame {
  
 
     public fieldgame() { //initiating the game with 1000 points for both players
-        player1Score = 1000;
-        player2Score = 1000;
+        player1Score = Konto.gameReset();
+        player2Score = Konto.gameReset();
     }
  
    
