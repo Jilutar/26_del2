@@ -14,7 +14,7 @@ class Playerresponse {
         
         if (input.equals("n")) {
             System.out.println("Quit the game? (y/n)");
-            input.nextLine().toLowerCase();
+            
                 if (input.equals("y")) {
                     System.out.println("Game will end.");
                     endGame();
