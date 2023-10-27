@@ -1,31 +1,20 @@
-import java.util.Random;
- 
-
 public class fieldgame {
  
-    private int player1Score;
-    private int player2Score;
-    private Random random;
+    private double player1Score;
+    private double player2Score;
  
 
     public fieldgame() { //initiating the game with 1000 points for both players
         player1Score = 1000;
         player2Score = 1000;
-        random = new Random();
     }
  
-    private int rollDice() {
-        int dice1 = random.nextInt(6)+1; 
-        int dice2 = random.nextInt(6)+1;
-        int dicecurrent = dice1+dice2; 
-        return dicecurrent; //prints out the dicecurrent that is two dices together
-    }
- 
+   
     //code for when the game starts 
     public void playRound() {
         while (player1Score < 3000 && player2Score < 3000) {
-            int player1Roll = rollDice();
-            int player2Roll = rollDice();
+            double player1Roll = Dice.rollDice();
+            double player2Roll = Dice.rollDice();
  
 
             if(player1Roll==2) {
