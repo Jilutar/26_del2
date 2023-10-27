@@ -14,7 +14,7 @@ public class fieldgame {
     //code for when the game starts 
     public void playRound() {
         while (player1Score < 3000 && player2Score < 3000) {
-            System.out.println("Spil psil?");
+            System.out.println("Play game? y/n");
 
             Playerresponse.PlayerResponse();
             double player1Roll = Dice.rollDice();
